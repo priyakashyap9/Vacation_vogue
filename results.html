@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outfit Ideas</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Outfit Ideas for {{ destination }} on {{ travel_date }}</h1>
+        <p>Weather Forecast: {{ weather }}</p>
+        <div class="gallery">
+            {% for outfit in outfits %}
+                <div class="card">
+                    <img src="{{ outfit.image }}" alt="Outfit suggestion">
+                    <p>{{ outfit.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/">Try another plan</a>
+    </div>
+</body>
+</html>
